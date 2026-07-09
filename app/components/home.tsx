@@ -148,7 +148,7 @@ export default function CebBillCheckerPage() {
         </AnimatePresence>
 
         <p className="mt-6 text-center text-xs text-zinc-600">
-          Data is fetched live from CEB's payment portal. This tool only previews details — it doesn't process payments.
+          Data is fetched live from CEB&apos;s payment portal. This tool only previews details — it doesn&apos;t process payments.
         </p>
       </div>
     </main>
