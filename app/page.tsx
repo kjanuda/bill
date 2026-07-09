@@ -2,9 +2,16 @@
 
 import { useState } from "react";
 
+type BillData = {
+  accountHolder: string;
+  accountNumber: string;
+  billBalance: string;
+  registeredMobile: string;
+};
+
 export default function Home() {
   const [accountNo, setAccountNo] = useState("");
-  const [bill, setBill] = useState<any>(null);
+  const [bill, setBill] = useState<BillData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

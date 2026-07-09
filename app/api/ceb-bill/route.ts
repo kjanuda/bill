@@ -75,14 +75,15 @@ export async function POST(req: Request) {
 
 
 
-  } catch(error:any){
+  } catch(error: unknown){
 
     console.error(error);
+    const message = error instanceof Error ? error.message : "Unknown error";
 
     return NextResponse.json(
       {
         ok:false,
-        error:error.message,
+        error:message,
       },
       {
         status:500,
