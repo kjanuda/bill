@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://elecbillview.vercel.app/"; // ← ඔයාගේ actual domain එක දාන්න
+const siteUrl = "https://ceb-bill-preview.vercel.app/"; // ← ඔයාගේ actual domain එක දාන්න
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   verification: {
-    google: "c8a0f856eba1e5e6",
+    google: "google01a98f4cbe16d4f9",
   },
 
   formatDetection: {
@@ -120,7 +120,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Bill Pay",
-              url: "https://elecbillview.vercel.app/",
+              url: "https://ceb-bill-preview.vercel.app/",
               description:
                 "Check your CEB electricity bill balance instantly online and get it emailed to you.",
               applicationCategory: "UtilitiesApplication",

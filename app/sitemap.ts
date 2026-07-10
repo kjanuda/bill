@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://elecbillview.vercel.app/",
+      url: "https://ceb-bill-preview.vercel.app/",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
