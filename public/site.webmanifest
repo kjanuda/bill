@@ -1,0 +1,21 @@
+{
+  "name": "Bill Pay",
+  "short_name": "BillPay",
+  "description": "Check your CEB electricity bill balance instantly online",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5c1414",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "og-image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "og-image/png"
+    }
+  ]
+}
