@@ -58,9 +58,7 @@ export default function Home() {
           onKeyDown={(e) => e.key === "Enter" && checkBill()}
         />
 
-        {error && (
-          <p className="mt-2 text-sm text-red-600">{error}</p>
-        )}
+        {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
 
         <button
           onClick={checkBill}
@@ -82,9 +80,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-between border-t border-neutral-100 pt-4">
               <span className="text-sm text-neutral-500">Bill balance</span>
-              <span className="text-xl font-bold text-[#5c1414]">
-                LKR {bill.billBalance}
-              </span>
+              <span className="text-xl font-bold text-[#5c1414]">LKR {bill.billBalance}</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-neutral-500">Registered mobile</span>
@@ -93,8 +89,10 @@ export default function Home() {
           </div>
         )}
 
-        <div className="mt-10 border-t border-neutral-100 pt-5">
-          
+        <div className="mt-10 border-t border-neutral-100 pt-5 text-center">
+          <p className="text-xs text-neutral-400">
+            Developed by <a href="https://kjanuda.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-[#5c1414] font-medium transition">Januda J Kodithuwakku</a>
+          </p>
         </div>
       </div>
     </main>
