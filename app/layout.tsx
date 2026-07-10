@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://ceb-bill-preview.vercel.app/"; // ← ඔයාගේ actual domain එක දාන්න
+const siteUrl = "https://ceb-bill-preview.vercel.app"; // ← trailing slash එක අයින් කළා
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -88,7 +89,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   verification: {
-    google: "google01a98f4cbe16d4f9",
+    google: "01a98f4cbe16d4f9",
   },
 
   formatDetection: {
@@ -120,7 +121,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Bill Pay",
-              url: "https://ceb-bill-preview.vercel.app/",
+              url: siteUrl,
               description:
                 "Check your CEB electricity bill balance instantly online and get it emailed to you.",
               applicationCategory: "UtilitiesApplication",
@@ -139,7 +140,19 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "xkfnjkr3qv");
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
